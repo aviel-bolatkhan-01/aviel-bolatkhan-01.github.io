@@ -418,6 +418,15 @@ h3 {
   padding: 22px;
 }
 
+.case-meta {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.83rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .case-feature img,
 .case-card img {
   width: 100%;
