@@ -221,6 +221,7 @@ h3 {
 .stats-grid,
 .card-grid,
 .case-metrics,
+.case-strip,
 .gallery-grid,
 .tools-grid {
   display: grid;
@@ -238,6 +239,11 @@ h3 {
 
 .case-metrics {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.case-strip {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-bottom: 16px;
 }
 
@@ -292,6 +298,29 @@ h3 {
 .gallery-card {
   overflow: hidden;
   border-radius: 24px;
+}
+
+.case-shot {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.case-shot img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+  background: #0d1117;
+}
+
+.case-shot figcaption {
+  padding: 10px 12px 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
 }
 
 .gallery-card img {
@@ -353,6 +382,7 @@ h3 {
   .stats-grid,
   .card-grid,
   .case-metrics,
+  .case-strip,
   .gallery-grid,
   .tools-grid,
   .footer {
