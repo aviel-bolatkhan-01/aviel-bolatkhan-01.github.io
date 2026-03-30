@@ -678,25 +678,49 @@ h3 {
   }
 
   .topbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding: 14px;
-    gap: 12px;
+    gap: 10px;
+    overflow: hidden;
   }
 
   .brand {
     font-size: 0.92rem;
+    max-width: 108px;
+    line-height: 1.15;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: auto;
+    max-width: calc(100% - 118px);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
   }
 
   .nav a {
+    flex: 0 0 auto;
     justify-content: center;
-    padding: 10px 12px;
+    min-height: 40px;
+    padding: 8px 11px;
     border: 1px solid var(--line);
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.03);
+    font-size: 0.9rem;
   }
 
   .hero,
   .section {
-    padding: 18px;
+    padding: 16px;
   }
 
   .eyebrow {
@@ -707,8 +731,8 @@ h3 {
 
   h1 {
     max-width: 100%;
-    font-size: clamp(1.72rem, 9.4vw, 2.45rem);
-    line-height: 1.02;
+    font-size: clamp(1.52rem, 8vw, 2.05rem);
+    line-height: 1.03;
   }
 
   h2 {
@@ -722,21 +746,22 @@ h3 {
 
   .lede,
   .section-lede {
-    margin-top: 14px;
-    font-size: 0.98rem;
-    line-height: 1.6;
+    margin-top: 12px;
+    font-size: 0.94rem;
+    line-height: 1.55;
   }
 
   .hero-actions {
-    margin-top: 18px;
-  }
-
-  .contact-inline {
-    margin-top: 12px;
-  }
-
-  .trust-pills {
     margin-top: 16px;
+  }
+
+  .contact-inline,
+  .trust-pills {
+    display: none;
+  }
+
+  .hero-visual {
+    gap: 10px;
   }
 
   .trust-pills span,
@@ -750,7 +775,7 @@ h3 {
   }
 
   .portrait-frame img {
-    max-height: 300px;
+    max-height: 260px;
   }
 
   .hero-proof {
@@ -836,19 +861,30 @@ h3 {
 }
 
 @media (max-width: 420px) {
-  .nav {
-    grid-template-columns: 1fr 1fr;
-  }
-
   h1 {
-    font-size: clamp(1.5rem, 9vw, 2rem);
-    line-height: 1.03;
+    font-size: clamp(1.34rem, 7.8vw, 1.72rem);
+    line-height: 1.04;
   }
 
   .btn {
-    min-height: 50px;
-    padding: 0 16px;
-    font-size: 0.95rem;
+    min-height: 48px;
+    padding: 0 14px;
+    font-size: 0.92rem;
+  }
+
+  .brand {
+    max-width: 92px;
+    font-size: 0.84rem;
+  }
+
+  .nav {
+    max-width: calc(100% - 98px);
+  }
+
+  .nav a {
+    min-height: 38px;
+    padding: 7px 10px;
+    font-size: 0.84rem;
   }
 
   .logo-strip {
