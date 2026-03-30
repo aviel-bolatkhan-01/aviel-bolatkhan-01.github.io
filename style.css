@@ -214,11 +214,12 @@ h3 {
 
 .hero-visual img {
   width: 100%;
-  height: min(620px, 72vw);
-  object-fit: cover;
-  object-position: center top;
+  height: min(480px, 58vw);
+  object-fit: contain;
+  object-position: center center;
   border-radius: 26px;
   display: block;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
 }
 
 .hero-badge {
