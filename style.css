@@ -95,7 +95,12 @@ body {
   display: flex;
   gap: 4px;
   flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
+
+.nav::-webkit-scrollbar { display: none; }
 
 .nav a {
   color: var(--muted);
@@ -106,9 +111,13 @@ body {
   border-radius: 999px;
   transition: color 150ms, background 150ms;
   white-space: nowrap;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.nav a:hover { color: var(--text); background: rgba(255,255,255,0.06); }
+.nav a:hover,
+.nav a:focus { color: var(--text); background: rgba(255,255,255,0.06); outline: none; }
+.nav a:active { background: rgba(255,255,255,0.08); }
 
 /* HERO */
 .hero {
