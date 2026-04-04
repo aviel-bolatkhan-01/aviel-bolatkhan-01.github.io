@@ -46,7 +46,7 @@
           </div>
           <div class="hero-visual">
             <div class="portrait-frame">
-              <img src="./assets/profile-haircut.jpeg" alt="Aviel Bolatkhan">
+              <img src="./assets/profile-headshot.jpg" alt="Aviel Bolatkhan">
             </div>
             <div class="hero-proof">
               <article>
@@ -54,8 +54,8 @@
                 <span>average delivery time</span>
               </article>
               <article>
-                <strong>50% less</strong>
-                <span>than a typical US agency</span>
+                <strong>No agency</strong>
+                <span>overhead or markup</span>
               </article>
             </div>
           </div>
@@ -70,7 +70,6 @@
           <div class="service-grid">
 
             <article class="service-card featured">
-              <span class="service-tag">Most popular</span>
               <h3>AI Automation</h3>
               <p>Replace repetitive manual work with intelligent workflows. I connect your tools, build your bots, and automate the stuff no one wants to do.</p>
               <ul>
@@ -83,7 +82,6 @@
             </article>
 
             <article class="service-card featured">
-              <span class="service-tag">Apps</span>
               <h3>App Development</h3>
               <p>From web apps to native iOS and Android — I build working products fast using AI-assisted development.</p>
               <ul>
@@ -167,7 +165,6 @@
 
             <article class="pricing-card featured">
               <div class="pricing-top">
-                <span class="service-tag">Most requested</span>
                 <h3>Web App / MVP</h3>
                 <p>A working web application with real features — auth, database, UI, and deployment included.</p>
               </div>
@@ -241,11 +238,11 @@
           <div class="faq-grid">
             <article class="faq-card">
               <h3>Are you a traditional developer?</h3>
-              <p>No. I build using AI tools like Claude and n8n. That's what lets me move so fast — what takes a dev team a month, I deliver in days.</p>
+              <p>No. I build using AI tools like Claude, n8n, and Firebase. That's what lets me move fast and keep costs lower than an agency — but the output is fully functional, deployed software.</p>
             </article>
             <article class="faq-card">
-              <h3>Can I see something live?</h3>
-              <p>Yes — thelampgame.com. A full web app with Firebase, PWA, and SEO, built solo with AI from scratch. Open it on your phone.</p>
+              <h3>Can I see something you've built?</h3>
+              <p>Yes — thelampgame.com. A full web app with 9,231 questions, Firebase, PWA, daily streaks, and SEO. Built entirely solo using AI tools. Open it on your phone.</p>
             </article>
             <article class="faq-card">
               <h3>What's included in the price?</h3>
@@ -326,7 +323,17 @@
       </main>
     </div>
 
+    <a class="fab" href="#contact">Get a free quote</a>
+
     <script>
+      // Hide FAB when contact section is visible
+      const fab = document.querySelector('.fab');
+      const contactSection = document.getElementById('contact');
+      const fabObserver = new IntersectionObserver(([e]) => {
+        fab.classList.toggle('hidden', e.isIntersecting);
+      }, { threshold: 0.1 });
+      fabObserver.observe(contactSection);
+
       const form       = document.getElementById('contactForm');
       const submitBtn  = document.getElementById('submitBtn');
       const submitText = document.getElementById('submitText');
