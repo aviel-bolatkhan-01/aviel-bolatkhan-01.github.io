@@ -296,6 +296,9 @@ h3 {
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
+.service-grid-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 .service-card {
   padding: 28px;
@@ -965,7 +968,7 @@ h3 {
   .section-heading { margin-bottom: 20px; }
 
   /* SERVICES */
-  .service-grid { grid-template-columns: 1fr; gap: 12px; }
+  .service-grid, .service-grid-3 { grid-template-columns: 1fr; gap: 12px; }
   .service-card { padding: 22px; }
 
   /* CASE */
