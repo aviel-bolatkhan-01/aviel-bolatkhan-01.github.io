@@ -299,6 +299,9 @@ h3 {
 .service-grid-3 {
   grid-template-columns: 1fr 1fr 1fr;
 }
+.service-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
 
 .service-card {
   padding: 28px;
@@ -861,6 +864,72 @@ h3 {
   .fab { bottom: 16px; right: 16px; height: 44px; font-size: 0.84rem; }
 }
 
+/* Lamp case study visual */
+.lamp-demo-card {
+  background: #1A1A20;
+  border: 1px solid rgba(224,168,96,0.25);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 340px;
+}
+.lamp-badge {
+  font-size: 13px;
+  font-weight: 700;
+  color: #E0A860;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+.lamp-question {
+  font-size: 15px;
+  font-weight: 600;
+  color: #EDEDEC;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.lamp-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.lamp-opt {
+  background: #242430;
+  border: 1px solid rgba(237,237,236,0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #A8A8A4;
+  text-align: center;
+}
+.lamp-opt.correct {
+  background: rgba(224,168,96,0.15);
+  border-color: #E0A860;
+  color: #E0A860;
+  font-weight: 600;
+}
+
+/* Trust metrics row */
+.section-trust { padding-block: 40px; }
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  text-align: center;
+}
+.trust-item strong {
+  display: block;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 800;
+  color: #E0A860;
+  font-family: 'Unbounded', sans-serif;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.trust-item span {
+  font-size: 13px;
+  color: #737373;
+}
+
 /* ==========================================
    RESPONSIVE — TABLET (max 900px)
    ========================================== */
@@ -888,6 +957,10 @@ h3 {
   }
 
   .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -968,7 +1041,7 @@ h3 {
   .section-heading { margin-bottom: 20px; }
 
   /* SERVICES */
-  .service-grid, .service-grid-3 { grid-template-columns: 1fr; gap: 12px; }
+  .service-grid, .service-grid-3, .service-grid-4 { grid-template-columns: 1fr; gap: 12px; }
   .service-card { padding: 22px; }
 
   /* CASE */

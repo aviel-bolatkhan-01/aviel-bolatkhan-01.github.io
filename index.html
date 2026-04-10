@@ -74,7 +74,7 @@
             <p class="eyebrow">Services</p>
             <h2>What I build</h2>
           </div>
-          <div class="service-grid service-grid-3">
+          <div class="service-grid service-grid-4">
 
             <article class="service-card featured">
               <h3>AI Voice Agents</h3>
@@ -106,6 +106,17 @@
                 <li>Make / n8n pipeline setup and deployment</li>
                 <li>Automated follow-ups, invoices, and reminders</li>
                 <li>Internal alerts for high-priority leads and tasks</li>
+              </ul>
+            </article>
+
+            <article class="service-card featured">
+              <h3>Web Apps &amp; MVPs</h3>
+              <p>From idea to deployed product in days. I build fast, functional web apps — no agencies, no bloat, no waiting.</p>
+              <ul>
+                <li>Single-page or multi-screen, mobile-first design</li>
+                <li>Firebase / Supabase real-time backend</li>
+                <li>Auth, payments, user accounts if needed</li>
+                <li>Deployed to custom domain, ready to scale</li>
               </ul>
             </article>
 
@@ -161,11 +172,11 @@
               <p>Built an end-to-end outreach system that scraped 2,000+ local businesses, wrote a personalized email for each one using AI, and sent them automatically — with reply monitoring running hourly in the background. What would take a VA weeks ran overnight.</p>
               <div class="case-stats">
                 <div class="case-stat">
-                  <strong>2,162</strong>
+                  <strong>2,000+</strong>
                   <span>leads processed</span>
                 </div>
                 <div class="case-stat">
-                  <strong>504</strong>
+                  <strong>758+</strong>
                   <span>emails sent</span>
                 </div>
                 <div class="case-stat">
@@ -176,6 +187,44 @@
             </div>
             <div class="case-hero-visual email-visual">
               <img src="./assets/email-automation-telegram.png" alt="Email automation Telegram summary" class="case-screenshot">
+            </div>
+          </article>
+
+          <div style="height:24px"></div>
+
+          <!-- Lamp Bible Trivia App -->
+          <article class="case-hero case-hero-lamp">
+            <div class="case-hero-copy">
+              <span class="case-channel">Web App</span>
+              <p class="case-meta">Solo Build · thelampgame.com</p>
+              <h3>Bible Trivia App — 9,000+ Questions, Live PWA</h3>
+              <p>Built a full multiplayer trivia app from scratch — solo, no framework, no shortcuts. 9,231 hand-verified questions across 19 categories, Firebase Realtime DB for live multiplayer, offline support via PWA, and 7 game modes including Pass &amp; Play, Quick Match, and team battles.</p>
+              <div class="case-stats">
+                <div class="case-stat">
+                  <strong>9,231</strong>
+                  <span>verified questions</span>
+                </div>
+                <div class="case-stat">
+                  <strong>7</strong>
+                  <span>game modes</span>
+                </div>
+                <div class="case-stat">
+                  <strong>Live</strong>
+                  <span>thelampgame.com</span>
+                </div>
+              </div>
+            </div>
+            <div class="case-hero-visual lamp-visual">
+              <div class="lamp-demo-card">
+                <div class="lamp-badge">🕯️ Lamp Bible Trivia</div>
+                <div class="lamp-question">Who built the first altar in the Bible?</div>
+                <div class="lamp-options">
+                  <div class="lamp-opt correct">Noah</div>
+                  <div class="lamp-opt">Abraham</div>
+                  <div class="lamp-opt">Moses</div>
+                  <div class="lamp-opt">Cain</div>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -218,6 +267,28 @@
             </div>
           </article>
 
+        </section>
+
+        <!-- TRUST METRICS -->
+        <section class="section section-trust">
+          <div class="trust-row">
+            <div class="trust-item">
+              <strong>758+</strong>
+              <span>Cold emails sent this week</span>
+            </div>
+            <div class="trust-item">
+              <strong>3–14</strong>
+              <span>Day delivery average</span>
+            </div>
+            <div class="trust-item">
+              <strong>9,231</strong>
+              <span>Questions in live app</span>
+            </div>
+            <div class="trust-item">
+              <strong>$0</strong>
+              <span>Agency markup</span>
+            </div>
+          </div>
         </section>
 
         <!-- PRICING -->
@@ -451,10 +522,10 @@
         const message = form.message.value.trim();
 
         const serviceLabels = {
-          'ai-automation': 'AI Automation / Chatbot',
+          'voice-agent':   'AI Voice Receptionist',
+          'chatbot':       'AI Chatbot / Lead Bot',
           'workflow':      'Workflow Automation',
-          'web-app':       'Web App / MVP',
-          'mobile-app':    'Mobile App (iOS / Android)',
+          'full-system':   'Full Automation System',
           'not-sure':      'Not sure yet',
         };
 
