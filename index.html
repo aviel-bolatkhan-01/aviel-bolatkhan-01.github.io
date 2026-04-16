@@ -525,6 +525,24 @@
         });
       });
 
+      // Track WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+        link.addEventListener('click', () => {
+          trackGA('whatsapp_click', {
+            phone_number: link.href.split('/').pop()
+          });
+        });
+      });
+
+      // Track direct Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener('click', () => {
+          trackGA('email_click', {
+            email_address: link.href.replace('mailto:', '').split('?')[0]
+          });
+        });
+      });
+
       const form       = document.getElementById('contactForm');
       const submitBtn  = document.getElementById('submitBtn');
       const submitText = document.getElementById('submitText');
