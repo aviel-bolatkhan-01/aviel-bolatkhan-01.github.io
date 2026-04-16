@@ -500,6 +500,13 @@
     <a class="fab" href="https://calendly.com/abzal-business-01/30min" target="_blank" rel="noreferrer">Book a free call</a>
 
     <script>
+      // GA4 Event Helpers
+      function trackGA(eventName, params = {}) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params);
+        }
+      }
+
       // Hide FAB when contact section is visible
       const fab = document.querySelector('.fab');
       const contactSection = document.getElementById('contact');
@@ -507,6 +514,16 @@
         fab.classList.toggle('hidden', e.isIntersecting);
       }, { threshold: 0.1 });
       fabObserver.observe(contactSection);
+
+      // Track Calendly clicks
+      document.querySelectorAll('a[href*="calendly.com"]').forEach(link => {
+        link.addEventListener('click', () => {
+          trackGA('book_call_click', {
+            link_url: link.href,
+            link_text: link.textContent.trim()
+          });
+        });
+      });
 
       const form       = document.getElementById('contactForm');
       const submitBtn  = document.getElementById('submitBtn');
@@ -553,6 +570,10 @@
           });
           const json = await res.json();
           if (json.ok) {
+            trackGA('generate_lead', {
+              method: 'telegram_form',
+              service_type: serviceLabels[service] || service
+            });
             formStatus.textContent = "✓ Message sent! I'll get back to you within a few hours.";
             formStatus.classList.add('form-success');
             form.reset();
@@ -561,6 +582,10 @@
           }
         } catch {
           // Fallback to mailto
+          trackGA('contact_fallback', {
+            method: 'mailto',
+            service_type: serviceLabels[service] || service
+          });
           const subj = encodeURIComponent('Project inquiry — ' + (serviceLabels[service] || service));
           const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nService: ${service}\n\n${message}`);
           window.location.href = `mailto:abzal.business.01@gmail.com?subject=${subj}&body=${body}`;
